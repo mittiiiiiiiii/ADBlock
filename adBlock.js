@@ -4,7 +4,7 @@
 window.onload = () => { //ページ読み込み完了時
     for (let i = 0; i < 4; i++){
         //adBlock();
-        setTimeout(adBlock, 100)
+        setTimeout(adBlock, 3000)
       }  
 }
 chrome.runtime.onMessage.addListener((msg) => { //main.jsからメッセージが送られてきた時

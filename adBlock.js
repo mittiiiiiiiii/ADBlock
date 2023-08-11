@@ -5,7 +5,7 @@ $(document).ready(() => { //ページ読み込み直後
     setTimeout(adBlock, 7000);*/
     for (let i = 0; i < 4; i++){
         //adBlock();
-        setTimeout(adBlock, 2000)
+        setTimeout(adBlock, 500)
       }
 });
 /*window.onload = () => { //ページ読み込み完了時

@@ -1,8 +1,11 @@
 $(document).ready(() => { //ページ読み込み直後
-    adBlock();
-    setTimeout(adBlock, 3000); //3秒後
+    
+    /*setTimeout(adBlock, 3000); //3秒後
     setTimeout(adBlock, 5000); //5秒後
-    setTimeout(adBlock, 7000);
+    setTimeout(adBlock, 7000);*/
+    for (let i = 0; i < 4; i++){
+        adBlock();
+      }
 });
 /*window.onload = () => { //ページ読み込み完了時
     adBlock();

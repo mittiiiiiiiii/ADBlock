@@ -1,17 +1,12 @@
-$(document).ready(() => { //ページ読み込み直後
-    
-    /*setTimeout(adBlock, 3000); //3秒後
-    setTimeout(adBlock, 5000); //5秒後
-    setTimeout(adBlock, 7000);*/
+/*$(document).ready(() => { //ページ読み込み直後
+   
+});*/
+window.onload = () => { //ページ読み込み完了時
     for (let i = 0; i < 4; i++){
         //adBlock();
-        setTimeout(adBlock, 500)
-      }
-});
-/*window.onload = () => { //ページ読み込み完了時
-    adBlock();
-    
-}*/
+        setTimeout(adBlock, 100)
+      }  
+}
 chrome.runtime.onMessage.addListener((msg) => { //main.jsからメッセージが送られてきた時
     adBlock();
     return true;

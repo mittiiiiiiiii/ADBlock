@@ -10,13 +10,15 @@ chrome.runtime.onMessage.addListener((msg) => { //main.jsからメッセージ�
     return true;
 });
 
+function removeElementsByClassName(className) {
+    const elements = Array.prototype.slice.call(document.getElementsByClassName(className));
+    elements.forEach((el) => {
+        el.remove();
+    });
+}
+
 const adBlock = () => { //広告削除
-    function removeElementsByClassName(className) {
-        const elements = Array.prototype.slice.call(document.getElementsByClassName(className));
-        elements.forEach((el) => {
-            el.remove();
-        });
-    }
+    
     
     removeElementsByClassName("iframe");
     removeElementsByClassName("yjAdImage");

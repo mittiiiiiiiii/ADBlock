@@ -11,13 +11,14 @@ chrome.runtime.onMessage.addListener((msg) => { //main.jsからメッセージ�
 });
 
 const adBlock = () => { //広告削除
-    Array.from(document.getElementsByTagName("iframe")).forEach((el) => {
-        el.remove();
-    });
-    Array.from(document.getElementsByClassName("yjAdImage")).forEach((el) => {
-        el.remove();
-    });
-    Array.from(document.getElementsByClassName("yadsOverlay")).forEach((el) => {
-        el.remove();
-    });
+    function removeElementsByClassName(className) {
+        const elements = Array.from(document.getElementsByClassName(className));
+        elements.forEach((el) => {
+            el.remove();
+        });
+    }
+    
+    removeElementsByClassName("iframe");
+    removeElementsByClassName("yjAdImage");
+    removeElementsByClassName("yadsOverlay");
 }

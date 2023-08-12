@@ -11,12 +11,8 @@ chrome.runtime.onMessage.addListener((msg) => { //main.jsからメッセージ�
 });
 
 const removeElementsBySelector = (selector) => {
-    document.querySelectorAll(selector).forEach(el => {
-        if (el.classList.contains(selector)) {
-            el.remove();
-        }
-    });
-};    
+    document.querySelectorAll(selector).forEach(el => el.remove());
+};
 
 const adBlock = () => {
     removeElementsBySelector("iframe");
@@ -37,6 +33,5 @@ const adBlock = () => {
     removeElementsBySelector(".promo");
     removeElementsBySelector(".promotion");
     removeElementsBySelector(".Introduction__item__image");
-    removeElementsBySelector("banner");
 
 };

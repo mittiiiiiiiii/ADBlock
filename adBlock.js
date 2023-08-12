@@ -11,8 +11,7 @@ chrome.runtime.onMessage.addListener((msg) => { //main.jsからメッセージ�
 });
 
 function removeElementsByClassName(className) {
-    const elements = Array.prototype.slice.call(document.getElementsByClassName(className));
-    elements.forEach((el) => {
+    Array.prototype.slice.call(document.getElementsByClassName(className)).forEach((el) => {
         el.remove();
     });
 }

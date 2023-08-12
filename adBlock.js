@@ -12,7 +12,7 @@ chrome.runtime.onMessage.addListener((msg) => { //main.jsからメッセージ�
 
 const adBlock = () => { //広告削除
     function removeElementsByClassName(className) {
-        const elements = Array.from(document.getElementsByClassName(className));
+        const elements = Array.prototype.slice.call(document.getElementsByClassName(className));
         elements.forEach((el) => {
             el.remove();
         });

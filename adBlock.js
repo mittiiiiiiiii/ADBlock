@@ -33,5 +33,7 @@ const adBlock = () => {
     removeElementsBySelector(".promo");
     removeElementsBySelector(".promotion");
     removeElementsBySelector(".Introduction__item__image");
+    removeElementsBySelector(".gn_sw-slider");
+    
 
 };

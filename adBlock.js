@@ -10,14 +10,12 @@ chrome.runtime.onMessage.addListener((msg) => { //main.jsからメッセージ�
     return true;
 });
 
-const adBlock = () => { //広告削除
-    Array.prototype.slice.call(document.getElementsByTagName("iframe")).forEach((el) => {
-        el.remove();
-    });
-    Array.prototype.slice.call(document.getElementsByClassName("yjAdImage")).forEach((el) => {
-        el.remove();
-    });
-    Array.prototype.slice.call(document.getElementsByClassName("yadsOverlay")).forEach((el) => {
-        el.remove();
-    });
-}
+const removeElementsBySelector = (selector) => {
+    document.querySelectorAll(selector).forEach(el => el.remove());
+};
+
+const adBlock = () => {
+    removeElementsBySelector("iframe");
+    removeElementsBySelector(".yjAdImage");
+    removeElementsBySelector(".yadsOverlay");
+};

@@ -18,8 +18,6 @@ const adBlock = () => {
     removeElementsBySelector("iframe");
     removeElementsBySelector(".yjAdImage");
     removeElementsBySelector(".yadsOverlay");
-    removeElementsBySelector("header-banner-link");
-    removeElementsBySelector("popup-inner");
-    
-    
+    removeElementsBySelector(".header-banner-link");
+    removeElementsBySelector(".popup-inner");
 };

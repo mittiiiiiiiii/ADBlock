@@ -18,4 +18,23 @@ const adBlock = () => {
     removeElementsBySelector("iframe");
     removeElementsBySelector(".yjAdImage");
     removeElementsBySelector(".yadsOverlay");
+    removeElementsBySelector(".header-banner-link");
+    removeElementsBySelector(".popup-inner");
+    removeElementsBySelector(".ad");
+    removeElementsBySelector(".advertisement");
+    removeElementsBySelector(".banner");
+    removeElementsBySelector(".ad-banner");
+    removeElementsBySelector(".ad-container");
+    removeElementsBySelector(".ad-box");
+    removeElementsBySelector(".ad-link");
+    removeElementsBySelector(".ad-anchor");
+    removeElementsBySelector(".sponsor");
+    removeElementsBySelector(".advertiser");
+    removeElementsBySelector(".promo");
+    removeElementsBySelector(".promotion");
+    removeElementsBySelector(".Introduction__item__image");
+    removeElementsBySelector(".gn_sw-slider");
+    removeElementsBySelector(".gn_rect_float_closed_icon");
+    
+
 };

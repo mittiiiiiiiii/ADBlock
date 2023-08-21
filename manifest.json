@@ -1,6 +1,6 @@
 {
     "name": "adBlock",
-    "version": "0.1.2",
+    "version": "0.1.4",
     "manifest_version": 3,
     "action": {
         "default_popup": "popup.html"

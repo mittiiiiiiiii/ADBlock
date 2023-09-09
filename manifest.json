@@ -17,8 +17,11 @@
     "host_permissions": ["http://*/*", "https://*/"],
     "content_scripts": [
         {
-            "js": ["adBlock.js"],
-            "matches": ["<all_urls>"]
+            "matches": ["<all_urls>"],
+            "run_at":"document_start",
+            "js": ["adBlock.js"]
+            
+            
         }
     ]
 }

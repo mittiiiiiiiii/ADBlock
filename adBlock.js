@@ -35,4 +35,7 @@ const adBlock = () => {
     removeElementsBySelector(".Introduction__item__image");
     removeElementsBySelector(".gn_sw-slider");
     removeElementsBySelector(".gn_rect_float_closed_icon");
+    removeElementsBySelector(".gn_delivery_1425972_8708dbd7");
+    removeElementsBySelector(".gn_rect_float_closed_icon");
+    removeElementsBySelector(".gn_delivery_1425972_ff00b595");
 };

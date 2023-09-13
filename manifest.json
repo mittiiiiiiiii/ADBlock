@@ -1,9 +1,10 @@
 {
     "name": "adBlock",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "manifest_version": 3,
     "action": {
-        "default_popup": "popup.html"
+        "default_popup": "popup.html",
+        "default_icon": "icon.png"
     },
     "commands": {
         "_execute_action": {
@@ -13,7 +14,7 @@
             }
         }
     },
-    "permissions": ["scripting", "tabs"],
+    "permissions": ["scripting", "tabs","activeTab"],
     "host_permissions": ["http://*/*", "https://*/"],
     "content_scripts": [
         {

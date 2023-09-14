@@ -1,14 +1,14 @@
 // ページ読み込み完了時にadBlock関数を4回呼び出す
 window.onload = () => {
     for (let i = 0; i < 4; i++) {
-        setTimeout(adBlock, 500); // adBlock関数を0.5秒ごとに4回呼び出す
+        setTimeout(adBlock, 499); // adBlock関数を0.5秒ごとに4回呼び出す
     }
 }
 
 // main.jsからのメッセージ受信時にadBlock関数を4回呼び出す
 chrome.runtime.onMessage.addListener((msg) => {
     for (let i = 0; i < 4; i++) {
-        setTimeout(adBlock, 500); // adBlock関数を0.5秒ごとに4回呼び出す
+        setTimeout(adBlock, 499); // adBlock関数を0.5秒ごとに4回呼び出す
     }
     return true;
 });
@@ -20,7 +20,7 @@ const removeElementsBySelector = (selector) => {
 
 // adBlock関数: 消したい要素の文字列を配列で指定し、それらの要素を全て削除
 const adBlock = () => {
-    const elementPatterns = [/ad-/i, /iframe/i, /otherElement/i,/banner-/i,/closed_icon/i]; // 正規表現パターンを配列で指定
+    const elementPatterns = [/ad-/i, /iframe/i, /otherElement/i,/banner-/i,/closed_icon/i,/adsbygoogle/i]; // 正規表現パターンを配列で指定
     elementPatterns.forEach(pattern => {
         const elementsToRemove = document.querySelectorAll('*'); // ページ内のすべての要素を取得
 

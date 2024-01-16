@@ -20,12 +20,12 @@ const removeElementsBySelector = (selector) => {
 
 // adBlock関数: 消したい要素の文字列を配列で指定し、それらの要素を全て削除
 const adBlock = () => {
-    const elementPatterns = [/ad-/i, /iframe/i, /otherElement/i,/banner-/i,/closed_icon/i,/adsbygoogle/i]; // 正規表現パターンを配列で指定
+    const elementPatterns = [/ad-/i,/VideoAd/i, /iframe/i,/banner-/i,/closed_icon/i,/adsbygoogle/i,/_tag/i]; // 正規表現パターンを配列で指定
     elementPatterns.forEach(pattern => {
         const elementsToRemove = document.querySelectorAll('*'); // ページ内のすべての要素を取得
 
         elementsToRemove.forEach(element => {
-            // クラス名を取得し、正規表現に一致するか、またはタグ名が正規表現に一致する場合に要素を削除
+            // クラス名を取得し、正規表現に一致する場合に要素を削除
             const classNames = element.className.split(' '); // クラス名をスペースで分割
             classNames.forEach(className => {
                 if (pattern.test(className)) {
